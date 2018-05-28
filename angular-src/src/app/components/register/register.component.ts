@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
       password: this.password
     }
     //Required fields
-    //CAN USE ngForm in HTML file to require all fields and clean inputs(empty)
+    //CAN USE ngForm in HTML file to require all fields and clean inputs(such as empty strings) 
     if(!this.validateService.validateRegister(user)){
       this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
       return false;
